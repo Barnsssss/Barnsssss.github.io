@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Webpage</title>
+  <style>
+    /* Base Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #101111;
+      color: white;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #101111;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    header li {
+      position: relative;
+    }
+
+    header li a {
+      color: #f2f2f2;
+      text-decoration: none;
+      font-size: 17px;
+      padding: 10px 20px;
+      display: block;
+      transition: all 0.3s ease;
+      border-radius: 15px;
+    }
+
+    header li a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #101111;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    header li:hover .submenu {
+      display: block;
+    }
+
+    .submenu li {
+      display: block;
+    }
+
+    .submenu li a {
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    .submenu li a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    /* Section Base Style */
+    section {
+      padding: 100px 10vw 80px 10vw;
+      min-height: 100vh;
+    }
+
+    #home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - 80px);
+      padding: 0 20vw;
+    }
+
+    #home .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 10px;
+	  padding: 0;
+    }
+
+    #home .text {
+      flex: 1;
+      min-width: 300px;
+      animation: slideDown 1s ease-out forwards;
+      animation-delay: 0.2s;
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+
+    #home h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    #home p {
+      font-size: 24px;
+    }
+
+    #home img {
+      flex: 1;
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      animation: slideDown 1s ease-out forwards;
+      animation-delay: 1s;
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+
+    @keyframes slideDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #About-me h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    #About-me p {
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      #home .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #home img {
+        order: -1;
+      }
+
+      header {
+        justify-content: center;
+      }
+
+      header ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#About-me">About me</a></li>
+      <li>
+        <a href="#">Section</a>
+        <ul class="submenu">
+          <li><a href="#Portfolio">Portfolio</a></li>
+          <li><a href="#Blog-and-Articles">Blog and Articles</a></li>
+          <li><a href="#Skills-and-Expertise">Skills and Expertise</a></li>
+          <li><a href="#Project">Project</a></li>
+          <li><a href="#Testimonials">Testimonials</a></li>
+          <li><a href="#Personal-Interests">Personal Interests</a></li>
+        </ul>
+      </li>
+      <li><a href="#Contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <section id="home" class="active">
+    <div class="container">
+      <div class="text">
+        <h2>Hi Everyone!</h2>
+        <p>I am Vernice and let me introduce my <br>simple webpage.</p>
+      </div>
+      <img src="image.jpg" alt="Vernice's portrait">
+    </div>
+  </section>
+
+  <section id="About-me" class="active">
+    <div>
+      <h2>About me</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum blandit dolor a feugiat.</p>
+    </div>
+  </section>
+
+  <section id="Portfolio">
+    <div>
+      <h2>Portfolio</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum blandit dolor a feugiat.</p>
+    </div>
+	</section>
+  <section id="Blog-and-Articles">
+	<div>
+      <h2>Blog and Articles</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum blandit dolor a feugiat.</p>
+	</div>
+  </section>
+  <section id="Skills-and-Expertise">
+    <div>
+      <h2>Skills and Expertise</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum blandit dolor a feugiat.</p>
+    </div>  
+  </section>
+  <section id="Project">
+    <div>
+      <h2>Project</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum blandit dolor a feugiat.</p>
+    </div>  
+  </section>
+  <section id="Testimonials">
+    <div>
+      <h2>Testimonials</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum blandit dolor a feugiat.</p>
+    </div>  
+  </section>
+  <section id="Personal-Interests">
+    <div>
+      <h2>Personal Interests</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum blandit dolor a feugiat.</p>
+    </div>  
+  </section>
+  <section id="Contact">
+    <div>
+      <h2>Contact</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum blandit dolor a feugiat.</p>
+    </div>  
+  </section>
+
+</body>
+</html>
