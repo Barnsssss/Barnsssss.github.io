@@ -122,8 +122,13 @@
       transform: translateY(-50px);
     }
 
-    #home h2 {
-      font-size: 30px;
+    #home h1 {
+      font-size: 35px;
+      margin-bottom: 100px;
+    }
+	
+	#home h2 {
+      font-size: 25px;
       margin-bottom: 20px;
     }
 
@@ -142,6 +147,40 @@
       opacity: 0;
       transform: translateY(-50px);
     }
+	
+	#Blog-and-Articles .container {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+
+	#Blog-and-Articles .text {
+		flex: 1;
+		min-width: 300px;
+	}	
+
+	#Blog-and-Articles img {
+		flex: 1;
+		max-width: 300px;
+		margin-top: 10vh;
+		width: 100%;
+		height: auto; 
+		border-radius: 20px;
+		}
+
+	@media (max-width: 768px) {
+		#Blog-and-Articles .container {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	#Blog-and-Articles img {
+		order: -1; 
+	}
+	}
+
 
     @keyframes slideDown {
       to {
@@ -153,14 +192,14 @@
     #About-me h2, #Portfolio h2, #Skills-and-Expertise h2, 
     #Blog-and-Articles h2, #Project h2, #Testimonials h2, 
     #Personal-Interests h2, #Contact h2 {
-      font-size: 28px;
+      font-size: 30px;
       margin-bottom: 10px;
     }
 
     #Portfolio p, #Skills-and-Expertise p, #Blog-and-Articles p,
     #Project p, #Testimonials p, #Personal-Interests p, 
     #Contact p, #About-me p {
-      font-size: 17px;
+      font-size: 20px;
     }
 
     @media (max-width: 768px) {
@@ -207,6 +246,8 @@
   <section id="home" class="active">
     <div class="container">
       <div class="text">
+		<h1>Explore My World. Connect With Me Today.</h1>
+		&nbsp;
         <h2>Hi Everyone!</h2>
         <p>I am Vernice and let me introduce my <br>simple webpage.</p>
       </div>
@@ -217,7 +258,19 @@
   <section id="About-me">
     <div>
       <h2>About me</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum blandit dolor a feugiat.</p>
+	  &nbsp;
+		<p>I'm Vernice Lawrence Faustino from ITS 1st year, 3rd trimester, and I am sharing the very beginning of my</p>
+		<p>academic journey as a STEM student. I was deeply fascinated by how technology works and how it can be</p>
+		<p>used to solve real-world problems. STEM education exposed me to a wide range of disciplines, science, technology,</p>
+		<p>engineering, and mathematics, which strengthened my logical thinking, analytical skills, and attention to detail.</p>
+		<p>Among all the areas I explored, computers captured my interest the most. I was intrigued not only by how they</p>
+		<p>functioned but also by how they could be repaired. Upgraded and optimised to perform better. This curiosity turned</p>
+		<p>into a passion as I began learning about computer hardware, software, and networking. I spent time studying the inner</p>
+		<p>components of computers, understanding how operating systems run, and solving both minor and complex issues.</p>
+		<p>Over time, this passion and knowledge grew into a professional skill set. My journey from STEM student to computer</p>
+		<p>technician is a reflection of my commitment to continuous learning, my ability to adapt to technological advancements,</p>
+		<p>and my strong connection to the world of computers. Every step I’ve taken has reinforced my belief that technology is not</p>
+		<p>just a tool; it’s a field where my skills, knowledge, and passion come together.</p>
     </div>
   </section>
 
@@ -229,7 +282,8 @@
   </section>
   
   <section id="Blog-and-Articles">
-    <div>
+		<div class="container">
+		<div class="text">
 		<h2>Blog and Articles</h2>
 		&nbsp;
 		<p>Creating a webpage is both a technical craft and a form of expression. It begins with building the structure</p>
@@ -247,6 +301,8 @@
 		<p>In essence, building a webpage is the act of constructing the product, while web design is the art and science that</p>
 		<p>guides its creation to be both functional and visually appealing.</p>
     </div>
+		<img src = "desktop.jpg">
+	</div>
   </section>
   
   <section id="Skills-and-Expertise">
