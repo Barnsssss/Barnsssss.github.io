@@ -4,17 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Personal Webpage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Open Sans', sans-serif;
       background-color: #101111;
@@ -29,22 +23,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-right: 20px;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
-    header ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    header li {
-      position: relative;
-    }
-
+    header ul { list-style: none; display: flex; gap: 20px; }
+    header li { position: relative; }
     header li a {
       color: #f2f2f2;
       text-decoration: none;
@@ -54,10 +39,7 @@
       transition: all 0.3s ease;
       border-radius: 15px;
     }
-
-    header li a:hover,
-    header li a.active,
-    .submenu li a.active {
+    header li a:hover, header li a.active, .submenu li a.active {
       background-color: white;
       color: black;
     }
@@ -71,28 +53,14 @@
       padding: 10px 0;
       z-index: 1000;
     }
-
-    header li:hover .submenu {
-      display: block;
-    }
-
-    .submenu li {
-      display: block;
-    }
-
-    .submenu li a {
-      padding: 10px 20px;
-      white-space: nowrap;
-    }
-
-    .submenu li a:hover {
-      background-color: white;
-      color: black;
-    }
+    header li:hover .submenu { display: block; }
+    .submenu li a { padding: 10px 20px; white-space: nowrap; }
+    .submenu li a:hover { background-color: white; color: black; }
 
     section {
       padding: 100px 10vw 80px 10vw;
       min-height: 100vh;
+      scroll-margin-top: 90px;
     }
 
     #home {
@@ -102,124 +70,80 @@
       min-height: calc(99vh - 80px);
       padding: 0 20vw;
     }
-
-    #home .container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      width: 100%;
-      gap: 10px;
-      padding: 0;
-    }
-
-    #home .text {
-      flex: 1;
-      min-width: 300px;
-      animation: slideDown 1s ease-out forwards;
-      animation-delay: 0.2s;
-      opacity: 0;
-      transform: translateY(-50px);
-    }
-
-    #home h1 {
-      font-size: 35px;
-      margin-bottom: 100px;
-    }
-	
-	#home h2 {
-      font-size: 25px;
-      margin-bottom: 20px;
-    }
-
-    #home p {
-      font-size: 20px;
-    }
-
+    #home .container { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:10px; width:100%; }
+    #home .text { flex:1; min-width:300px; animation:slideDown 1s ease-out forwards; animation-delay:0.2s; opacity:0; transform:translateY(-50px); }
+    #home h1 { font-size:35px; margin-bottom:100px; }
+    #home h2 { font-size:25px; margin-bottom:20px; }
+    #home p { font-size:20px; }
     #home img {
-      flex: 1;
-      max-width: 300px;
-      width: 100%;
-      height: 400px;
-      border-radius: 20px;
-      animation: slideDown 1s ease-out forwards;
-      animation-delay: 1s;
-      opacity: 0;
-      transform: translateY(-50px);
-    }
-	
-	#Blog-and-Articles .container {
-		display: flex;
-		align-items: flex-start;
-		justify-content: space-between;
-		gap: 20px;
-		flex-wrap: wrap;
-	}
-
-	#Blog-and-Articles .text {
-		flex: 1;
-		min-width: 300px;
-	}	
-
-	#Blog-and-Articles img {
-		flex: 1;
-		max-width: 300px;
-		margin-top: 10vh;
-		width: 100%;
-		height: auto; 
-		border-radius: 20px;
-		}
-
-	@media (max-width: 768px) {
-		#Blog-and-Articles .container {
-		flex-direction: column;
-		text-align: center;
-	}
-
-	#Blog-and-Articles img {
-		order: -1; 
-	}
-	}
-
-
-    @keyframes slideDown {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      flex: 1; max-width: 300px; width:100%; height:400px; border-radius:20px;
+      animation:slideDown 1s ease-out forwards; animation-delay:1s; opacity:0; transform:translateY(-50px);
     }
 
-    #About-me h2, #Portfolio h2, #Skills-and-Expertise h2, 
-    #Blog-and-Articles h2, #Project h2, #Testimonials h2, 
-    #Personal-Interests h2, #Contact h2 {
-      font-size: 30px;
-      margin-bottom: 10px;
+    #Blog-and-Articles .container {
+      display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap;
     }
-
-    #Portfolio p, #Skills-and-Expertise p, #Blog-and-Articles p,
-    #Project p, #Testimonials p, #Personal-Interests p, 
-    #Contact p, #About-me p {
-      font-size: 20px;
-    }
+    #Blog-and-Articles .text { flex:1; min-width:300px; }
+    #Blog-and-Articles img { flex:1; max-width:300px; margin-top:10vh; width:100%; height:auto; border-radius:20px; }
 
     @media (max-width: 768px) {
-      #home .container {
-        flex-direction: column;
-        text-align: center;
-      }
+      #Blog-and-Articles .container { flex-direction:column; text-align:center; }
+      #Blog-and-Articles img { order:-1; }
+    }
 
-      #home img {
-        order: -1;
-      }
+    @keyframes slideDown { to { opacity:1; transform:translateY(0); } }
 
-      header {
-        justify-content: center;
-      }
+    #About-me h2, #Portfolio h2, #Skills-and-Expertise h2, #Blog-and-Articles h2, #Project h2, #Testimonials h2, #Personal-Interests h2, #Contact h2 {
+      font-size: 40px; margin-bottom: 10px;
+    }
+    #Portfolio p, #Skills-and-Expertise p, #Blog-and-Articles p, #Project p, #Testimonials p, #Personal-Interests p, #Contact p, #About-me p {
+      font-size: 20px;
+    }
+	
 
-      header ul {
-        flex-direction: column;
-        gap: 15px;
-      }
+    footer {
+      background-color: #101111;
+      border-top: 2px solid #333;
+      padding: 60px 10vw 20px 10vw;
+      margin-top: 40px;
+      scroll-margin-top: 90px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-section h3 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: white;
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+    }
+
+    .footer-section ul { list-style: none; }
+    .footer-section ul li { margin-bottom: 12px; }
+    .footer-section ul li a {
+      color: #f2f2f2; text-decoration: none; font-size: 16px; transition: all 0.3s ease; display:flex; align-items:center; gap:8px;
+    }
+    .footer-section ul li a:hover { color: white; padding-left: 10px; }
+
+    .footer-contact { display:flex; flex-direction:column; gap:15px; }
+    .footer-contact .contact-item { display:flex; align-items:center; gap:10px; font-size:16px; }
+    .footer-contact .contact-item i { font-size:20px; color:#f2f2f2; }
+
+    .footer-bottom { border-top:1px solid #333; padding-top:20px; text-align:center; color:#aaa; font-size:14px; }
+
+    @media (max-width: 768px) {
+      footer { padding: 40px 5vw 20px 5vw; }
+      .footer-content { grid-template-columns: 1fr; gap: 30px; }
+      .social-links { justify-content: center; }
+      header ul { flex-direction: column; gap: 15px; }
+      #home .container { flex-direction: column; text-align: center; }
+      #home img { order: -1; }
     }
   </style>
 </head>
@@ -243,22 +167,21 @@
     </ul>
   </header>
 
-  <section id="home" class="active">
+  <section id="home">
     <div class="container">
       <div class="text">
-		<h1>Explore My World. Connect With Me Today.</h1>
-		&nbsp;
+        <h1>Explore My World. Connect With Me Today.</h1>
+        &nbsp;
         <h2>Hi Everyone!</h2>
         <p>I am Vernice and let me introduce my <br>simple webpage.</p>
       </div>
-      <img src="image.jpg">
+      <img src="image.jpg" alt="Profile Image">
     </div>
   </section>
 
   <section id="About-me">
-    <div>
-      <h2>About me</h2>
-	  &nbsp;
+    <h2>About me</h2>
+    &nbsp;
 		<p>I'm Vernice Lawrence Faustino from ITS 1st year, 3rd trimester, and I am sharing the very beginning of my</p>
 		<p>academic journey as a STEM student. I was deeply fascinated by how technology works and how it can be</p>
 		<p>used to solve real-world problems. STEM education exposed me to a wide range of disciplines, science, technology,</p>
@@ -271,21 +194,18 @@
 		<p>technician is a reflection of my commitment to continuous learning, my ability to adapt to technological advancements,</p>
 		<p>and my strong connection to the world of computers. Every step I’ve taken has reinforced my belief that technology is not</p>
 		<p>just a tool; it’s a field where my skills, knowledge, and passion come together.</p>
-    </div>
   </section>
 
   <section id="Portfolio">
-    <div>
-      <h2>Portfolio</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum blandit dolor a feugiat.</p>
-    </div>
+    <h2>Portfolio</h2>
+    <p>Lorem ipsum dolor sit amet...</p>
   </section>
-  
+
   <section id="Blog-and-Articles">
-		<div class="container">
-		<div class="text">
-		<h2>Blog and Articles</h2>
-		&nbsp;
+    <div class="container">
+      <div class="text">
+        <h2>Blog and Articles</h2>
+        &nbsp;
 		<p>Creating a webpage is both a technical craft and a form of expression. It begins with building the structure</p>
 		<p>using HTML, which serves as the skeleton that holds content, including headings, paragraphs, images, and links.</p>
 		<p>CSS then brings the design to life, adding colour, typography, layout, and visual effects to establish the overall</p>
@@ -300,109 +220,132 @@
 		<p>site also aligns its style with the brand or purpose it serves, whether that’s playful, professional, minimalist, or bold.</p>
 		<p>In essence, building a webpage is the act of constructing the product, while web design is the art and science that</p>
 		<p>guides its creation to be both functional and visually appealing.</p>
-    </div>
-		<img src = "desktop.jpg">
-	</div>
-  </section>
-  
-  <section id="Skills-and-Expertise">
-    <div>
-      <h2>Skills and Expertise</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum blandit dolor a feugiat.</p>
-    </div>  
-  </section>
-  
-  <section id="Project">
-    <div>
-      <h2>Project</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum blandit dolor a feugiat.</p>
-    </div>  
-  </section>
-  
-  <section id="Testimonials">
-    <div>
-      <h2>Testimonials</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum blandit dolor a feugiat.</p>
-    </div>  
-  </section>
-  
-  <section id="Personal-Interests">
-    <div>
-      <h2>Personal Interests</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum blandit dolor a feugiat.</p>
-    </div>  
-  </section>
-  
-  <section id="Contact">
-    <h2>Contact</h2>
-    <div class="Contact" style="display: flex; align-items: left-side; flex-direction: column;">
-      &nbsp;
-      <div style="display: flex; align-items: center; margin-bottom: 10px;">
-        <img src="email (1).png" alt="Email icon" style="height: 35px; border-radius: 10px; margin-right: 10px;">
-        <p>sapul_sapagmamahal@gmail.com</p>
       </div>
-      &nbsp;
-      <div style="display: flex; align-items: center;">
-        <img src="facebook.png" alt="Facebook icon" style="height: 35px; border-radius: 10px; margin-right: 10px;">
-        <p>Dwight Ramos</p>
-      </div>		
-      &nbsp;
-      <div style="display: flex; align-items: center;">
-        <img src="instagram.png" alt="Instagram icon" style="height: 35px; border-radius: 10px; margin-right: 10px;">
-        <p>@garciajoshuae</p>
-      </div>		
-      &nbsp;
-      <div style="display: flex; align-items: center;">
-        <img src="phone-call.png" alt="Phone icon" style="height: 35px; border-radius: 10px; margin-right: 10px;">
-        <p>094522tuktuktuk</p>
-      </div>
+      <img src="desktop.jpg" alt="Desktop Setup">
     </div>
   </section>
 
+  <section id="Skills-and-Expertise">
+    <h2>Skills and Expertise</h2>
+    <p>Lorem ipsum dolor sit amet...</p>
+  </section>
+
+  <section id="Project">
+    <h2>Project</h2>
+    <p>Lorem ipsum dolor sit amet...</p>
+  </section>
+
+  <section id="Testimonials">
+    <h2>Testimonials</h2>
+    <p>Lorem ipsum dolor sit amet...</p>
+  </section>
+
+  <section id="Personal-Interests">
+    <h2>Personal Interests</h2>
+	&nbsp;
+    <p>One of my main personal interests is playing online games, which I enjoy not only for entertainment</p>
+	<p>but also as a way to develop strategic thinking, quick decision-making, and teamwork skills.</p>
+	<p>Gaming has also sparked my curiosity about technology, leading me to occasionally explore advanced</p>
+	<p> studies about computer components and how they work together. I find it fascinating to learn about</p>
+	<p>processors, graphics cards, storage devices, and other hardware, as it helps me understand how to</p>
+	<p>optimize performance for both gaming and productivity. This blend of leisure and learning allows me</p>
+	<p>to enjoy my hobbies while deepening my technical knowledge</p>
+  </section>
+
+  <footer id="Contact">
+    <div class="footer-content">
+
+      <div class="footer-section">
+        <h3><i class="fas fa-envelope"></i> Contact</h3>
+        <div class="footer-contact">
+          <div class="contact-item"><i class="fas fa-envelope"></i><p>sapul_sapagmamahal@gmail.com</p></div>
+          <div class="contact-item"><i class="fab fa-facebook"></i><p>Dwight Ramos</p></div>
+          <div class="contact-item"><i class="fab fa-instagram"></i><p>@garciajoshuae</p></div>
+          <div class="contact-item"><i class="fas fa-phone"></i><p>094522tuktuktuk</p></div>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3><i class="fas fa-graduation-cap"></i> Educational Resources</h3>
+        <ul>
+          <li><a href="https://developer.mozilla.org/" target="_blank"><i class="fab fa-firefox"></i> MDN Web Docs</a></li>
+          <li><a href="https://www.w3schools.com/" target="_blank"><i class="fas fa-code"></i> W3Schools</a></li>
+          <li><a href="https://www.freecodecamp.org/" target="_blank"><i class="fab fa-free-code-camp"></i> FreeCodeCamp</a></li>
+          <li><a href="https://www.codecademy.com/" target="_blank"><i class="fas fa-laptop-code"></i> Codecademy</a></li>
+          <li><a href="https://stackoverflow.com/" target="_blank"><i class="fab fa-stack-overflow"></i> Stack Overflow</a></li>
+          <li><a href="https://github.com/" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Vernice Lawrence Faustino. All rights reserved.</p>
+      <p>Passionate about technology, computers, and continuous learning.</p>
+    </div>
+  </footer>
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const navLinks = document.querySelectorAll('header a, .submenu a');
-      const sections = document.querySelectorAll('section');
-      const offset = 100;
+      const navLinks = document.querySelectorAll('header a[href^="#"], footer a[href^="#"]');
+      const sections = document.querySelectorAll('section[id], footer[id]');
+
+
       navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
           const targetId = this.getAttribute('href');
+          if (!targetId || targetId === '#') return;
+
           if (targetId.startsWith('#')) {
             e.preventDefault();
-            const targetEl = document.querySelector(targetId);
-            if (targetEl) {
-              window.scrollTo({
-                top: targetEl.offsetTop - offset,
-                behavior: 'smooth'
-              });
+            const el = document.querySelector(targetId);
+            if (el) {
+
+              el.scrollIntoView({ behavior: 'smooth', block: 'start' });
               history.pushState(null, null, targetId);
             }
           }
         });
       });
 
+
       function updateActiveLink() {
-        let current = '';
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop;
-          if (window.scrollY >= sectionTop - offset) {
-            current = section.getAttribute('id');
+        const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+
+        const refY = headerHeight + 20;
+
+        let currentId = null;
+        let smallestDistance = Infinity;
+
+        sections.forEach(sec => {
+          const rect = sec.getBoundingClientRect();
+          const distance = Math.abs(rect.top - refY);
+          if (distance < smallestDistance) {
+            smallestDistance = distance;
+            currentId = sec.id || null;
           }
         });
-        
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === '#' + current) {
-            link.classList.add('active');
-            if (link.closest('.submenu')) {
-              link.closest('li').parentElement.parentElement
-                  .querySelector('a').classList.add('active');
+
+        navLinks.forEach(l => l.classList.remove('active'));
+
+
+        if (currentId) {
+          const matches = document.querySelectorAll('a[href="#' + currentId + '"]');
+          matches.forEach(m => m.classList.add('active'));
+
+          
+          matches.forEach(m => {
+            const submenu = m.closest('.submenu');
+            if (submenu) {
+              const topA = submenu.parentElement.querySelector('a');
+              if (topA) topA.classList.add('active');
             }
-          }
-        });
+          });
+        }
       }
-      
+
       window.addEventListener('scroll', updateActiveLink);
+      window.addEventListener('resize', updateActiveLink);
       updateActiveLink();
     });
   </script>
