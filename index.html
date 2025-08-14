@@ -149,6 +149,59 @@
       #home .container { flex-direction: column; text-align: center; }
       #home img { order: -1; }
     }
+
+	  	#Testimonials {
+  background-color: #101111;
+  padding: 80px 10vw;
+}
+
+	#Testimonials h2 {
+  font-size: 40px;
+  text-align: left;
+  margin-bottom: 40px;
+  color: white;
+}
+
+	.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+}
+
+	.testimonial {
+  background: #101111;
+  color: white;
+  padding: 40px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 450px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+	#testimonial p {
+  font-size: 30px;
+  line-height: 1.6;
+}
+
+	.testimonial strong {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: white;
+  text-align: right;
+  font-style: italic;
+}
+
+	@media (max-width: 768px) {
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
   </style>
 </head>
 <body>
@@ -239,10 +292,30 @@
 	</ul>
   </section>
 
-  <section id="Testimonials">
-    <h2>Testimonials</h2>
-    <p>Lorem ipsum dolor sit amet...</p>
-  </section>
+<section id="Testimonials">
+  <h2>Testimonials</h2>
+  &nbsp;
+  <div class="testimonial-container">
+    <div class="testimonial">
+      <p>“Vernice’s webpage is a remarkable example of blending creativity with technical skill. 
+      The layout is clean, well-structured, and easy to navigate...”</p>
+      <strong>- Respondent 1</strong>
+    </div>
+
+    <div class="testimonial">
+      <p>“What impressed me most about Vernice’s webpage is the balance between functionality 
+      and aesthetics. The navigation is intuitive...”</p>
+      <strong>- Respondent 2</strong>
+    </div>
+
+    <div class="testimonial">
+      <p>“This project demonstrates a deep understanding of what makes a webpage not only 
+      functional but also engaging...”</p>
+      <strong>- Respondent 3</strong>
+    </div>
+  </div>
+</section>
+
 
   <section id="Personal-Interests">
     <h2>Personal Interests</h2>
@@ -355,5 +428,6 @@
   </script>
 </body>
 </html>
+
 
 
