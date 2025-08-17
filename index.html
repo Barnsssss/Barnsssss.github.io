@@ -9,13 +9,14 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+	
     body {
       font-family: 'Open Sans', sans-serif;
       background-color: #101111;
       color: white;
       overflow-x: hidden;
       line-height: 1.6;
-	padding-top: 80px;
+	  padding-top: 80px; 
     }
 
     header {
@@ -26,7 +27,7 @@
       align-items: center;
       position: fixed;
       top: 0;
-		width: 100%;
+	  width: 100%;
       z-index: 1000;
     }
 
@@ -98,13 +99,18 @@
     #About-me h2, #Portfolio h2, #Skills-and-Expertise h2, #Blog-and-Articles h2, #Project h2, #Testimonials h2, #Personal-Interests h2, #Contact h2 {
       font-size: 40px; margin-bottom: 10px;
     }
-    #Portfolio p, #Skills-and-Expertise p, #Blog-and-Articles p, #Project p, #Testimonials p, #Personal-Interests p, #Contact p, #About-me p {
+	#Skills-and-Expertise p, #Blog-and-Articles p, #Project p, #Testimonials p, #Personal-Interests p, #Contact p, #About-me p {
       font-size: 20px;
     }
-
+	
 	#Skills-and-Expertise ul li {
 		font-size: 25px;
 	}
+	
+	 #Portfolio p {
+		font-size: 26px;
+	 
+	 }
 	
 
     footer {
@@ -151,8 +157,9 @@
       #home .container { flex-direction: column; text-align: center; }
       #home img { order: -1; }
     }
+	
 
-	  	#Testimonials {
+	#Testimonials {
   background-color: #101111;
   padding: 80px 10vw;
 }
@@ -198,12 +205,14 @@
   font-style: italic;
 }
 
+/* Responsive */
 	@media (max-width: 768px) {
   .testimonial-container {
     flex-direction: column;
     align-items: center;
   }
 }
+
   </style>
 </head>
 <body>
@@ -217,6 +226,7 @@
           <li><a href="#Portfolio">Portfolio</a></li>
           <li><a href="#Blog-and-Articles">Blog and Articles</a></li>
           <li><a href="#Skills-and-Expertise">Skills and Expertise</a></li>
+		  <li><a href="#Project">Project</a></li>
           <li><a href="#Testimonials">Testimonials</a></li>
           <li><a href="#Personal-Interests">Personal Interests</a></li>
         </ul>
@@ -229,7 +239,6 @@
     <div class="container">
       <div class="text">
         <h1>Explore My World. Connect With Me Today.</h1>
-        &nbsp;
         <h2>Hi Everyone!</h2>
         <p>I am Vernice and let me introduce my <br>simple webpage.</p>
       </div>
@@ -256,7 +265,7 @@
 
   <section id="Portfolio">
     <h2>Portfolio</h2>
-    &nbsp;
+	&nbsp;
     <p>I graduated in grade 6, and I received the award for being Athlete of the Year because I was selected to</p>
 	<p>play in City Meet for basketball during that time. During my grade 12 graduation, I received a loyalty award</p>
 	<p>for attending my previous school for 8 years. In this year I created my personal webpage and built a computer.</p>
@@ -288,13 +297,25 @@
 
   <section id="Skills-and-Expertise">
     <h2>Skills and Expertise</h2>
-    &nbsp;
+	&nbsp;
     <ul>
-	<li>I can build a computer</li>
-	<li>I can troubleshooting and repair computer hardware</li>
-	<li>I can code</li>
-	<li>I can install operating system</li>
+		<li>I can build a computer</li>
+		<li>I can troubleshooting and repair computer hardware</li>
+		<li>I can code</li>
+		<li>I can install operating system</li>
 	</ul>
+  </section>
+  
+    <section id="Project">
+    <h2>Project</h2>
+	&nbsp;
+    <p>In the future, I plan to create a school-related project using HTML that can be helpful for both students</p>
+	<p>and teachers. My idea is to design a simple school website where students can easily access announcements,
+	<p>class schedules, assignments, and learning resources in one place. The website will also include sections
+	<p>for posting important events and achievements to keep everyone updated. By developing this project, I can
+	<p>practice my HTML skills while providing a useful tool that supports communication and learning in school.
+	<p>This project can also serve as a foundation for adding more features in the future, such as interactive 
+	<p>quizzes or online forms for student feedback.</p>
   </section>
 
 <section id="Testimonials">
@@ -433,9 +454,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
