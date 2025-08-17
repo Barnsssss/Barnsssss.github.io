@@ -84,10 +84,33 @@
     }
 
     #Blog-and-Articles .container {
-      display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap;
+      display:flex; align-items:flex-start; justify-content:space-between; gap:10px; flex-wrap:wrap;
     }
-    #Blog-and-Articles .text { flex:1; min-width:300px; }
-    #Blog-and-Articles img { flex:1; max-width:300px; margin-top:10vh; width:100%; height:auto; border-radius:20px; }
+    #Blog-and-Articles .text { flex:1; min-width:200px; }
+    #Blog-and-Articles img { flex:1; max-width:400px; margin-top:10vh; width:100%; height:auto; border-radius:20px; }
+	
+	 #Personal-Interests .pi {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  #Personal-Interests .sulat {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  #Personal-Interests img {
+    flex: 1;
+    max-width: 400px;
+    margin-top: 5vh;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+  }
 
     @media (max-width: 768px) {
       #Blog-and-Articles .container { flex-direction:column; text-align:center; }
@@ -305,7 +328,6 @@
 		<li>I can install operating system</li>
 	</ul>
   </section>
-  
     <section id="Project">
     <h2>Project</h2>
 	&nbsp;
@@ -344,17 +366,22 @@
 
 
   <section id="Personal-Interests">
-    <h2>Personal Interests</h2>
-	&nbsp;
-    <p>One of my main personal interests is playing online games, which I enjoy not only for entertainment</p>
-	<p>but also as a way to develop strategic thinking, quick decision-making, and teamwork skills.</p>
-	<p>Gaming has also sparked my curiosity about technology, leading me to occasionally explore advanced</p>
-	<p> studies about computer components and how they work together. I find it fascinating to learn about</p>
-	<p>processors, graphics cards, storage devices, and other hardware, as it helps me understand how to</p>
-	<p>optimize performance for both gaming and productivity. This blend of leisure and learning allows me</p>
-	<p>to enjoy my hobbies while deepening my technical knowledge</p>
-  </section>
-
+  <div class="pi">
+    <div class="sulat">
+      <h2>Personal Interests</h2>
+	  &nbsp;
+      <p>One of my main personal interests is playing online games, which I enjoy not only for entertainment</p>
+      <p>but also as a way to develop strategic thinking, quick decision-making, and teamwork skills.</p>
+      <p>Gaming has also sparked my curiosity about technology, leading me to occasionally explore advanced</p>
+      <p>studies about computer components and how they work together. I find it fascinating to learn about</p>
+      <p>processors, graphics cards, storage devices, and other hardware, as it helps me understand how to</p>
+      <p>optimize performance for both gaming and productivity. This blend of leisure and learning allows me</p>
+      <p>to enjoy my hobbies while deepening my technical knowledge.</p>
+    </div>
+    <img src="game.jpg" alt="Gaming image">
+  </div>
+</section>
+  
   <footer id="Contact">
     <div class="footer-content">
 
