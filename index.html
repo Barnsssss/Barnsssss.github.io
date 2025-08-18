@@ -244,7 +244,7 @@
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#About-me">About me</a></li>
       <li>
-        <a href="#">Section</a>
+        <a href="#" id = "section-link">Section</a>
         <ul class="submenu">
           <li><a href="#Portfolio">Portfolio</a></li>
           <li><a href="#Blog-and-Articles">Blog and Articles</a></li>
@@ -479,7 +479,20 @@
       window.addEventListener('resize', updateActiveLink);
       updateActiveLink();
     });
+
+	  const sectionLink = document.getElementById('section-link');
+			  if (sectionLink) {
+  sectionLink.addEventListener('click', function(e) {
+    e.preventDefault();
+   	  const portfolio = document.querySelector('#Portfolio');
+   		      if (portfolio) {
+      portfolio.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.pushState(null, null, '#Portfolio');
+    }
+  });
+}
   </script>
 </body>
 </html>
+
 
