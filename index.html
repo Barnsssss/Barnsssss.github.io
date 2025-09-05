@@ -1,11 +1,9 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Personal Webpage</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -73,45 +71,21 @@
       min-height: calc(99vh - 80px);
       padding: 0 20vw;
     }
-	  
-    #home .container { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:10px; width:100%; }
-    #home .text { flex:1; min-width:300px; animation:slideDown 1s ease-out forwards; animation-delay:0.2s; opacity:0; transform:translateY(-50px);}
-    #home h1 { font-size:35px; margin-bottom:40px;  margin-right: 20vh}
-    #home h2 { font-size:25px; margin-bottom:30px;  margin-right: 20vh}
+    #home .container { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:20px; width:100%; }
+    #home .text { flex:1; min-width:300px; animation:slideDown 1s ease-out forwards; animation-delay:0.2s; opacity:0; transform:translateY(-50px); }
+    #home h1 { font-size:35px; margin-bottom:30px; }
+    #home h2 { font-size:25px; margin-bottom:20px; }
     #home p { font-size:20px; }
     #home img {
-      flex: 1; max-width: 350px; width:100%; height:450px; border-radius:20px;
+      flex: 1; max-width: 300px; width:100%; height:400px; border-radius:20px;
       animation:slideDown 1s ease-out forwards; animation-delay:1s; opacity:0; transform:translateY(-50px);
     }
 
     #Blog-and-Articles .container {
-      display:flex; align-items:flex-start; justify-content:space-between; gap:10px; flex-wrap:wrap;
+      display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap;
     }
-    #Blog-and-Articles .text { flex:1; min-width:200px; }
-    #Blog-and-Articles img { flex:1; max-width:400px; margin-top:10vh; width:100%; height:auto; border-radius:20px; }
-	
-	 #Personal-Interests .pi {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  #Personal-Interests .sulat {
-    flex: 1;
-    min-width: 300px;
-  }
-
-  #Personal-Interests img {
-    flex: 1;
-    max-width: 400px;
-    margin-top: 5vh;
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-    object-fit: cover;
-  }
+    #Blog-and-Articles .text { flex:1; min-width:300px; }
+    #Blog-and-Articles img { flex:1; max-width:300px; margin-top:10vh; width:100%; height:auto; border-radius:20px; }
 
     @media (max-width: 768px) {
       #Blog-and-Articles .container { flex-direction:column; text-align:center; }
@@ -245,7 +219,7 @@
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#About-me">About me</a></li>
       <li>
-        <a href="#" id = "section-link">Section</a>
+        <a href="#">Section</a>
         <ul class="submenu">
           <li><a href="#Portfolio">Portfolio</a></li>
           <li><a href="#Blog-and-Articles">Blog and Articles</a></li>
@@ -264,7 +238,7 @@
       <div class="text">
         <h1>Explore My World. Connect With Me Today.</h1>
         <h2>Hi Everyone!</h2>
-        <p>I am Vernice, and let me introduce my <br>simple Webpage.</p>
+        <p>I am Vernice and let me introduce my <br>simple webpage.</p>
       </div>
       <img src="image.jpg" alt="Profile Image">
     </div>
@@ -329,16 +303,18 @@
 		<li>I can install operating system</li>
 	</ul>
   </section>
+  
     <section id="Project">
     <h2>Project</h2>
 	&nbsp;
-		<p>In the future, I plan to create a school-related project using HTML that can be helpful for both students</p>
-		<p>and teachers. My idea is to design a simple school website where students can easily access announcements,</p>
-		<p>class schedules, assignments, and learning resources in one place. The site will also have sections to</p>
-		<p>announce important activities and achievements to maize people about such happenings. This project is being developed </p>
-		<p>to give me a canvas on which to practice my HTML but also makes a very nice educational tool for communication </p>
-		<p>and learning in schools. In fact, this project could form the basis for future features such as fun quizzes or forms</p> 
-		<p>for students to fill out regarding any feedback.es or online forms for student feedback.</p>
+    <p>In the future, I plan to create a school-related project using HTML that will be useful for both students and <br>
+	teachers. My idea is to design a simple but effective school website where students can easily access announcements <br> 
+	and learning resources in one place. The website will also include a dedicated section to highlight important activities <br>
+	and showcase the achievements of each school branch. This way, students, teachers, and even parents can stay updated <br>
+	and feel more connected to the school community. This project is not only a way for me to practice and improve my HTML <br>
+	skills, but it also has the potential to become a practical educational tool for communication and learning. In the long run, <br>
+	it could be expanded to include interactive features such as fun quizzes, online forms for student feedback, or even digital <br>
+	portfolios to further support engagement and collaboration across all branches of the school.</p>
   </section>
 
 <section id="Testimonials">
@@ -367,23 +343,17 @@
 
 
   <section id="Personal-Interests">
-  <div class="pi">
-    <div class="sulat">
-      <h2>Personal Interests</h2>
-	  &nbsp;
-      <p>Playing online games is one of my main personal interests, which I do not consider favourable sole</p>
-      <p>entertainment but also an avenue through which a (one) person could develop a strategic frame of mind,</p>
-      <p>an ability to make quick decisions, and learn how to function as part of a team. Gaming also made me</p></p>
-      <p>curious about technology that would studies about computer components and how they work together.</p>
-      <p>I find it fascinating to learn about how these work in conjunction. I find processors, graphics cards,</p>
-      <p>storage devices, and other hardware interesting because they teach me how to optimize performance for</p>
-      <p>gaming and productivity. Thus, leisure and education meet as I enjoy my hobby and learn more in the technical</p>
-	  <p>world.</p>
-    </div>
-    <img src="game.jpg" alt="Gaming image">
-  </div>
-</section>
-  
+    <h2>Personal Interests</h2>
+	&nbsp;
+    <p>One of my main personal interests is playing online games, which I enjoy not only for entertainment</p>
+	<p>but also as a way to develop strategic thinking, quick decision-making, and teamwork skills.</p>
+	<p>Gaming has also sparked my curiosity about technology, leading me to occasionally explore advanced</p>
+	<p> studies about computer components and how they work together. I find it fascinating to learn about</p>
+	<p>processors, graphics cards, storage devices, and other hardware, as it helps me understand how to</p>
+	<p>optimize performance for both gaming and productivity. This blend of leisure and learning allows me</p>
+	<p>to enjoy my hobbies while deepening my technical knowledge</p>
+  </section>
+
   <footer id="Contact">
     <div class="footer-content">
 
@@ -480,22 +450,6 @@
       window.addEventListener('resize', updateActiveLink);
       updateActiveLink();
     });
-
-	  const sectionLink = document.getElementById('section-link');
-			  if (sectionLink) {
-  sectionLink.addEventListener('click', function(e) {
-    e.preventDefault();
-   	  const portfolio = document.querySelector('#Portfolio');
-   		      if (portfolio) {
-      portfolio.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      history.pushState(null, null, '#Portfolio');
-    }
-  });
-}
   </script>
 </body>
 </html>
-
-
-
-
