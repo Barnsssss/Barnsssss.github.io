@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Personal Webpage</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -71,21 +73,46 @@
       min-height: calc(99vh - 80px);
       padding: 0 20vw;
     }
-    #home .container { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:20px; width:100%; }
-    #home .text { flex:1; min-width:300px; animation:slideDown 1s ease-out forwards; animation-delay:0.2s; opacity:0; transform:translateY(-50px); }
-    #home h1 { font-size:35px; margin-bottom:30px; }
-    #home h2 { font-size:25px; margin-bottom:20px; }
+	  
+    #home .container { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:10px; width:100%; }
+    #home .text { flex:1; min-width:300px; animation:slideDown 1s ease-out forwards; animation-delay:0.2s; opacity:0; transform:translateY(-50px);}
+    #home h1 { font-size:35px; margin-bottom:40px;  margin-right: 20vh}
+    #home h2 { font-size:25px; margin-bottom:30px;  margin-right: 20vh}
     #home p { font-size:20px; }
     #home img {
-      flex: 1; max-width: 300px; width:100%; height:400px; border-radius:20px;
+      flex: 1; max-width: 350px; width:100%; height:450px; border-radius:20px;
       animation:slideDown 1s ease-out forwards; animation-delay:1s; opacity:0; transform:translateY(-50px);
     }
 
     #Blog-and-Articles .container {
-      display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap;
+      display:flex; align-items:flex-start; justify-content:space-between; gap:10px; flex-wrap:wrap;
     }
-    #Blog-and-Articles .text { flex:1; min-width:300px; }
-    #Blog-and-Articles img { flex:1; max-width:300px; margin-top:10vh; width:100%; height:auto; border-radius:20px; }
+    #Blog-and-Articles .text { flex:1; min-width:200px; }
+    #Blog-and-Articles img { flex:1; max-width:400px; margin-top:10vh; width:100%; height:auto; border-radius:20px; }
+	
+	 #Personal-Interests .pi {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  #Personal-Interests .sulat {
+    flex: 1;
+    min-width: 300px;
+	font-size: 25px;
+  }
+
+  #Personal-Interests img {
+    flex: 1;
+    max-width: 400px;
+    margin-top: 5vh;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+  }
 
     @media (max-width: 768px) {
       #Blog-and-Articles .container { flex-direction:column; text-align:center; }
@@ -211,6 +238,19 @@
   }
 }
 
+	#Project ul li {
+		font-size: 30px;
+	}
+	
+	#Project p{
+		font-size: 25px;
+	}
+	
+	#Portfolio ul li {
+		font-size: 30px;
+	}
+	
+
   </style>
 </head>
 <body>
@@ -219,7 +259,7 @@
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#About-me">About me</a></li>
       <li>
-        <a href="#">Section</a>
+        <a href="#" id = "section-link">Section</a>
         <ul class="submenu">
           <li><a href="#Portfolio">Portfolio</a></li>
           <li><a href="#Blog-and-Articles">Blog and Articles</a></li>
@@ -238,7 +278,7 @@
       <div class="text">
         <h1>Explore My World. Connect With Me Today.</h1>
         <h2>Hi Everyone!</h2>
-        <p>I am Vernice and let me introduce my <br>simple webpage.</p>
+        <p>I am Vernice, and let me introduce my <br>simple Webpage.</p>
       </div>
       <img src="image.jpg" alt="Profile Image">
     </div>
@@ -264,9 +304,13 @@
   <section id="Portfolio">
     <h2>Portfolio</h2>
 	&nbsp;
-    <p>I graduated in grade 6, and I received the award for being Athlete of the Year because I was selected to</p>
-	<p>play in City Meet for basketball during that time. During my grade 12 graduation, I received a loyalty award</p>
-	<p>for attending my previous school for 8 years. In this year I created my personal webpage and built a computer.</p>
+	<ul>
+		<li>Athlete of the Year</li>
+		&nbsp;
+		<li>Loyalty Award</li>
+		&nbsp;
+		<li>Creating a Personal Webpage</li>
+	</ul>
   </section>
 
   <section id="Blog-and-Articles">
@@ -303,20 +347,19 @@
 		<li>I can install operating system</li>
 	</ul>
   </section>
-  
     <section id="Project">
     <h2>Project</h2>
 	&nbsp;
-     <p>The proposed future project focuses on developing a School Website and Smart Campus<br> Navigation System 
-	that aims to improve communication, accessibility, and convenience within the <br>
-	academic community. The school website will serve as a centralized platform where students, faculty,<br> 
-	and parents can access important information such as announcements, events, academic resources, <br>
-	and enrollment services. Meanwhile, the smart campus navigation system will be integrated into the <br>
-    platform, allowing users to easily locate classrooms, offices, laboratories, and other facilities through <br>
-	interactive digital maps. By combining these two features, the project will not only enhance the school’s <br>
-	online presence but also provide a modern, technology-driven solution that promotes efficiency, <br>
-	connectivity, and user-friendly experiences across the campus.</p>
-	</section>
+	<ul>
+		<li>School Website</li>
+		&nbsp;
+		<p>It is an online platform that provides students, teachers, parents, and staff with easy access to <br>essential information and services such as announcements, academic schedules, and enrollment details.</p>
+		&nbsp;
+		<li>Smart Campus Navigation System</li>
+		&nbsp;
+		<p>It is a digital solution designed to help students, faculty, and visitors easily find their way around the campus.<p>
+	</ul>
+  </section>
 
 <section id="Testimonials">
   <h2>Testimonials</h2>
@@ -325,35 +368,41 @@
     <div class="testimonial">
       <p>“Vernice’s webpage is a remarkable example of blending creativity with technical skill. 
       The layout is clean, well-structured, and easy to navigate...”</p>
-      <strong>- Kristine P.</strong>
+      <strong>- Respondent 1</strong>
     </div>
 
     <div class="testimonial">
       <p>“What impressed me most about Vernice’s webpage is the balance between functionality 
       and aesthetics. The navigation is intuitive...”</p>
-      <strong>- Ervin T.</strong>
+      <strong>- Respondent 2</strong>
     </div>
 
     <div class="testimonial">
       <p>“This project demonstrates a deep understanding of what makes a webpage not only 
       functional but also engaging...”</p>
-      <strong>- Francine D.</strong>
+      <strong>- Respondent 3</strong>
     </div>
   </div>
 </section>
 
-  <section id="Personal-Interests">
-    <h2>Personal Interests</h2>
-	&nbsp;
-    <p>One of my main personal interests is playing online games, which I enjoy not only for entertainment</p>
-	<p>but also as a way to develop strategic thinking, quick decision-making, and teamwork skills.</p>
-	<p>Gaming has also sparked my curiosity about technology, leading me to occasionally explore advanced</p>
-	<p> studies about computer components and how they work together. I find it fascinating to learn about</p>
-	<p>processors, graphics cards, storage devices, and other hardware, as it helps me understand how to</p>
-	<p>optimize performance for both gaming and productivity. This blend of leisure and learning allows me</p>
-	<p>to enjoy my hobbies while deepening my technical knowledge</p>
-  </section>
 
+  <section id="Personal-Interests">
+  <div class="pi">
+    <div class="sulat">
+      <h2>Personal Interests</h2>
+	  &nbsp;
+	  <ul>
+		<li>Playing Online</li>
+		&nbsp;
+		<li>Studying the Components of a Computer</li>
+		&nbsp;
+		<li>I love drinking iced coffee</li>
+	  </ul>
+    </div>
+    <img src="game.jpg" alt="Gaming image">
+  </div>
+</section>
+  
   <footer id="Contact">
     <div class="footer-content">
 
@@ -450,7 +499,21 @@
       window.addEventListener('resize', updateActiveLink);
       updateActiveLink();
     });
+
+	  const sectionLink = document.getElementById('section-link');
+			  if (sectionLink) {
+  sectionLink.addEventListener('click', function(e) {
+    e.preventDefault();
+   	  const portfolio = document.querySelector('#Portfolio');
+   		      if (portfolio) {
+      portfolio.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.pushState(null, null, '#Portfolio');
+    }
+  });
+}
   </script>
 </body>
 </html>
+
+
 
